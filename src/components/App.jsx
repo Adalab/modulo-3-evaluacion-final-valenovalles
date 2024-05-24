@@ -76,7 +76,7 @@ function App() {
   return (
     <div className="main">
       <Header/>
-      <Filter changeInputFilter={changeInputFilter} filter={filter} changeSelectFilter={changeSelectFilter} filterStatus={filterStatus} filterSpecie={filterSpecie} changeFilterSpecie={changeFilterSpecie}/>
+      <Filter changeInputFilter={changeInputFilter} filter={filter} changeSelectFilter={changeSelectFilter} filterStatus={filterStatus} filterSpecie={filterSpecie} changeFilterSpecie={changeFilterSpecie} changeReset={changeReset}/>
   
       <Routes>
         <Route path="/" element={<List listCharacters={filteredCharacters} changeReset={changeReset} />} />

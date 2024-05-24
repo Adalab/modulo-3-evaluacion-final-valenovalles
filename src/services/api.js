@@ -1,7 +1,7 @@
 function getDataApi(){
 
 
-    return fetch ("https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json")
+    return fetch (" https://rickandmortyapi.com/documentation/#get-all-characters")
     .then((response)=>response.json())
     .then ((data)=>{
         const newArrayData = data.results.map((characther)=>{

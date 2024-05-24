@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom"
 
-function NotFound({changeReset}) {
+function NotFound() {
 
-  const handleReset=()=>{
-    console.log("click")
-    changeReset()
-  }
+  
 
   return (
     <>
-    <button onClick={handleReset} >Reset your search</button>
-    <h2>NotFound</h2>
+    
+    <h2 className="notfound">NotFound</h2>
     
     </>
   )

@@ -15,7 +15,7 @@ function Detail({getInfo}) {
 
     data? 
     <div className='main__detail'>
-    <Link to="/">Volver a la home</Link>
+    <Link to="/" className='back'>Volver a la home</Link>
     <article className='character'>
     <h2>Detalle de tu personaje seleccionado</h2>
     <img src={data.image} alt="" />

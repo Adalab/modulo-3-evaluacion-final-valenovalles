@@ -1,5 +1,5 @@
 
-function Filter({changeInputFilter , filter, changeSelectFilter, filterStatus, changeFilterSpecie, filterSpecie}) {
+function Filter({changeInputFilter , filter, changeSelectFilter, filterStatus, changeFilterSpecie, filterSpecie, changeReset}) {
 
     const handleInput=(ev)=>{
         const valueInput= ev.target.value
@@ -15,17 +15,22 @@ function Filter({changeInputFilter , filter, changeSelectFilter, filterStatus, c
       const valueSelectSpecie = ev.target.value
       changeFilterSpecie (valueSelectSpecie)
     }
+
+    const handleReset=()=>{
+      console.log("click")
+      changeReset()
+    }
     //CONTROLAR FORMULARIO
   return (
     <> 
     <form className="main__form"action="" onSubmit={(ev)=>{ev.preventDefault()}}>
       <div className="main__form--div">
-        <label htmlFor="">¿Qué personaje buscas?</label>
-        <input value= {filter} placeholder="Escribe el nombre aquí" type="text" name='search' id='search'  onChange={handleInput}/>
+        <label htmlFor="">¿Who are you looking for?</label>
+        <input value= {filter} placeholder="Write the name" type="text" name='search' id='search'  onChange={handleInput}/>
       </div>
 
       <div className="main__form--div">
-        <label htmlFor="">¿Está vivo o muerto?</label>
+        <label htmlFor="">¿Dead or Alive?</label>
         <select value={filterStatus} name="status" id="status" onChange={handleSelect} >
           <option value="">Select</option>
           <option value="Alive">Alive</option>
@@ -35,12 +40,16 @@ function Filter({changeInputFilter , filter, changeSelectFilter, filterStatus, c
       </div>
 
       <div className="main__form--div">
-      <label htmlFor="">¿Qué especie buscas?</label>
+      <label htmlFor="">¿Human or Alien?</label>
         <select value={filterSpecie} name="status" id="status" onChange={handleSelectSpecie} >
           <option value="">Select</option>
           <option value="Human">Human</option>
           <option value="Alien">Alien</option>
         </select>
+        </div>
+
+        <div className="main__form--div back reset">
+          <a onClick={handleReset} href="">Reset your search</a>
       </div>
         
 
