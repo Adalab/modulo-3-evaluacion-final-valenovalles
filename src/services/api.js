@@ -1,7 +1,7 @@
 function getDataApi(){
 
 
-    return fetch (" https://rickandmortyapi.com/documentation/#get-all-characters")
+    return fetch ("https://rickandmortyapi.com/api/character")
     .then((response)=>response.json())
     .then ((data)=>{
         const newArrayData = data.results.map((characther)=>{
